@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* MARK: Custom properties */
+:root {
+    --background-color-1:#B3D686;
+    --background-color-2:#F8F39B;
+    --background-color-3:#D4C8E2;
+    --background-color-4:#02ADE6;
+    --background-color-5:#fdfdfd;
+    --background-color-6:#353434;
+    --background-color-7:#ececec;
+    
+    --text-color-1:#fff;
+    --text-color-2:#000;
+    
+    --font-size-xl: 2.5rem;
+    --font-size-l: 2rem;
+    --font-size-m: 1.5rem;
+    --font-size-sm: 1.3rem;
+    --font-size-s: 1.12rem;
+    --font-size-xs: 1rem;
+}
+
+@font-face {
+    font-family: Sansita;
+    src: url(assets/Sansita-Regular.ttf)
+}
+

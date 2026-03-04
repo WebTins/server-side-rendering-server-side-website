@@ -30,3 +30,55 @@
     src: url(assets/Sansita-Regular.ttf)
 }
 
+/* MARK: Body */
+body {
+        background-color: var(--background-color-5);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    /* MARK: Main */
+    main {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        /* MARK: Hele card */
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+            background-color: var(--background-color-2);
+            gap: 1rem;
+            border-radius: 10px;
+
+            /* Binnencard card (Dit gaat de card laten draaien) */
+            .inner-card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+
+                /* Voorkant van de card */
+                .front-card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .plant-name {
+                        font-family: Sansita;
+                    }
+                }
+
+                /* Achterkant van de card die alle info over de plant laat zien */
+                .back-card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

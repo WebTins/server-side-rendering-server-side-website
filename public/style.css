@@ -31,6 +31,11 @@
     src: url(assets/Sansita-Regular.ttf)
 }
 
+@font-face {
+    font-family: Opensans;
+    src: url(assets/OpenSans-Medium.ttf);
+}
+
 /* MARK: Body */
 body {  
         min-height: 100vh;

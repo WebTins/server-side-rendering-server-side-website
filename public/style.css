@@ -53,10 +53,11 @@ body {
         .card {
             display: flex;
             flex-direction: column;
+            height: 500px;
             width: 350px;
-            background-color: var(--background-color-2);
             gap: 1rem;
             border-radius: 10px;
+            perspective: 1000px;
 
             /* Binnencard card (Dit gaat de card laten draaien) */
             .inner-card {
@@ -65,6 +66,9 @@ body {
                 justify-content: center;
                 height: 100%;
                 width: 100%;
+                position: relative;
+                transform-style: preserve-3d;
+                transition: transform 1s ease-in-out;
 
                 /* Voorkant van de card */
                 .front-card {
@@ -76,8 +80,18 @@ body {
                         font-family: Sansita;
                     }
 
+                    .latin {
+                        font-family: Opensans;
+                        padding: 1rem 0 2rem 0;
+                    }
+
                     img {
                         border-radius: 10px;
+                    }
+
+                    .more-info {
+                        padding-top: 3rem;
+                        font-family: Opensans;
                     }
                 }
 
@@ -86,7 +100,24 @@ body {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    transform: rotateY(180deg);
                 }
+
+                /* Zichtbaarheid card */
+                .front-card, .back-card {
+                    position: absolute;
+                    backface-visibility: hidden;
+                    height: 80%;
+                    width: 100%;
+                    background-color: var(--background-color-2);
+                    border-radius: 10px;
+                    outline: var(--background-color-6) solid;
+                    cursor: pointer;
+                }
+            }
+
+            .inner-card.is-flipped {
+                transform: rotateY(180deg);
             }
         }
     }

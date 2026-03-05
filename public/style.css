@@ -16,6 +16,7 @@
     
     --text-color-1:#fff;
     --text-color-2:#000;
+    --text-color-3:#009245;
     
     --font-size-xl: 2.5rem;
     --font-size-l: 2rem;
@@ -31,8 +32,7 @@
 }
 
 /* MARK: Body */
-body {
-        background-color: var(--background-color-5);
+body {  
         min-height: 100vh;
         display: flex;
         justify-content: center;
@@ -70,6 +70,10 @@ body {
                     .plant-name {
                         font-family: Sansita;
                     }
+
+                    img {
+                        border-radius: 10px;
+                    }
                 }
 
                 /* Achterkant van de card die alle info over de plant laat zien */
@@ -77,6 +81,53 @@ body {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                }
+            }
+        }
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        
+        .nav-bar {
+            .nav-list {
+                display: flex;
+                justify-content: center;
+                gap: 3rem;
+                
+                li {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    padding-bottom: 0.5rem;
+
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        text-decoration: none;
+                        color: var(--text-color-2);
+                        font-family: Sansita;
+                        transition: 0.2s ease-in-out;
+                        
+                    }
+
+                    a svg path {
+                        transition: 0.2s ease-in-out;
+                    }
+
+                    a:hover svg path {
+                        color: var(--text-color-3);
+                        fill: var(--text-color-3);
+                    }
+
+                    a:hover {
+                        color: var(--text-color-3);
+                    }
                 }
             }
         }

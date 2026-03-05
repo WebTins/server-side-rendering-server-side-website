@@ -101,8 +101,24 @@ body {
                 .back-card {
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
+                    justify-content: center;
+                    align-items: flex-start; /* tekst links uitgelijnd binnen de card */
                     transform: rotateY(180deg);
+                    padding: 1.5rem;
+
+                    .plant-name {
+                        font-family: Sansita;
+                    }
+
+                    .omscription {
+                        font-family: Opensans;
+                        padding: 1rem 0 1rem 0;
+                    }
+
+                    p {
+                        font-family: Opensans;
+                        padding-top: 0.1rem;
+                    }
                 }
 
                 /* Zichtbaarheid card verbergen aan de achterkant */

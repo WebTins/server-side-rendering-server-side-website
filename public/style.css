@@ -57,6 +57,7 @@ body {
             width: 350px;
             gap: 1rem;
             border-radius: 10px;
+            /* Geeft de browser een begrip voor de 3d diepte */
             perspective: 1000px;
 
             /* Binnencard card (Dit gaat de card laten draaien) */
@@ -67,6 +68,7 @@ body {
                 height: 100%;
                 width: 100%;
                 position: relative;
+                /* Dit zorgt dat de card 3d wordt */
                 transform-style: preserve-3d;
                 transition: transform 1s ease-in-out;
 
@@ -103,7 +105,7 @@ body {
                     transform: rotateY(180deg);
                 }
 
-                /* Zichtbaarheid card */
+                /* Zichtbaarheid card verbergen aan de achterkant */
                 .front-card, .back-card {
                     position: absolute;
                     backface-visibility: hidden;
@@ -116,18 +118,22 @@ body {
                 }
             }
 
+            /* Laat de hele card 180 graden draaien */
             .inner-card.is-flipped {
                 transform: rotateY(180deg);
             }
         }
     }
 
+    /* Footer navigatie */
     footer {
         position: fixed;
         bottom: 0;
         width: 100%;
         
+        /* De nav */
         .nav-bar {
+            /* Lijst van de li's */
             .nav-list {
                 display: flex;
                 justify-content: center;
@@ -141,6 +147,7 @@ body {
                     align-items: center;
                     padding-bottom: 0.5rem;
 
+                    /* A link text */
                     a {
                         display: flex;
                         flex-direction: column;
@@ -155,12 +162,12 @@ body {
                     a svg path {
                         transition: 0.2s ease-in-out;
                     }
-
+                    /* Hover state van de SVG */
                     a:hover svg path {
                         color: var(--text-color-3);
                         fill: var(--text-color-3);
                     }
-
+                    /* Hover state van de a link text */
                     a:hover {
                         color: var(--text-color-3);
                     }

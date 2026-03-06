@@ -102,7 +102,7 @@ body {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    align-items: flex-start; /* tekst links uitgelijnd binnen de card */
+                    align-items: flex-start;
                     transform: rotateY(180deg);
                     padding: 1.5rem;
 

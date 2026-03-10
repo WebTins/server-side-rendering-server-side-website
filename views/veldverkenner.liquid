@@ -1,11 +1,11 @@
 {% render 'partials/head.liquid' %}
 <main class="main-card">
     <div class="card">
-        {% for plant in plants %}
+        
         <div class="inner-card">
             <section class="front-card">
-                <h1 class="plant-name">{{ plant.name }}</h1>
-                <p class="latin">{{ plant.latin }}</p>
+                <h1 class="plant-name">{{ plant.name | default: "Naam van plant"}}</h1>
+                <p class="latin">{{ plant.latin | default: "Latijnse naam van plant"}}</p>
                 <img class="plant-img" src="/assets/teunis.jpg" width="280" alt="teunisbloem">
                 <p class="more-info">Tik voor meer informatie</p>
             </section>
@@ -19,7 +19,7 @@
                 <p><strong>Leuke weetjes:</strong> de zaden zijn zeer voedzaam en rijk aan het omega-6-vetzuur gammalinoleenzuur.</p>
             </section>
         </div>
-        {% endfor %}
+       
     </div>
 </main>
 {% render 'partials/navigation.liquid' %}

@@ -13,6 +13,7 @@
     --background-color-5:#fdfdfd;
     --background-color-6:#353434;
     --background-color-7:#ececec;
+    --background-color-8:#c1f0ff;
     
     --text-color-1:#fff;
     --text-color-2:#000;
@@ -24,6 +25,7 @@
     --font-size-sm: 1.3rem;
     --font-size-s: 1.12rem;
     --font-size-xs: 1rem;
+    --font-size-xs: 0.8rem;
 }
 
 @font-face {
@@ -45,11 +47,18 @@ body {
 
     /* MARK: Main */
     main {
+
+    
+    /* ////////////////////////////////////////////////////////////// */
+    /* MARK: CARD */
+    /* DIT GEDEELTE GAAT OVER DE FLIP CARD */
+    /* ////////////////////////////////////////////////////////////// */
+    .main-card {
         display: flex;
         justify-content: center;
         width: 100%;
+        padding-bottom: 80px;
 
-        /* MARK: Hele card */
         .card {
             display: flex;
             flex-direction: column;
@@ -146,6 +155,7 @@ body {
         position: fixed;
         bottom: 0;
         width: 100%;
+        background-color: var(--background-color-5);
         
         /* De nav */
         .nav-bar {
@@ -154,6 +164,7 @@ body {
                 display: flex;
                 justify-content: center;
                 gap: 3rem;
+                padding-top: 0.5rem;
                 
                 li {
                     display: flex;

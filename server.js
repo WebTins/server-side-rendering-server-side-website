@@ -59,6 +59,10 @@ app.get('/veldverkenner', async function (request, response) {
     }
 })
 
+app.use((req, res, next) => {
+      res.status(404).render("404.liquid")
+})
+
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
 app.post('/', async function (request, response) {

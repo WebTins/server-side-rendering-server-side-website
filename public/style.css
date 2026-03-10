@@ -24,7 +24,6 @@
     --font-size-m: 1.5rem;
     --font-size-sm: 1.3rem;
     --font-size-s: 1.12rem;
-    --font-size-xs: 1rem;
     --font-size-xs: 0.8rem;
 }
 
@@ -45,8 +44,92 @@ body {
         justify-content: center;
         align-items: center;
 
-    /* MARK: Main */
-    main {
+    /* ////////////////////////////////////////////////////////////// */
+        /* MARK: HOME PAGE */
+        /* DIT GEDEELTE GAAT OVER DE HOME PAGE */
+    /* ////////////////////////////////////////////////////////////// */
+    .main-home {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 1rem 1rem 80px 1rem;
+
+        h1 {
+            text-align: center;
+            margin: 0.5em 0 0.5em 0;
+            font-family: Sansita;
+        }
+
+        h2, h3 {
+            padding: 1rem 0 1rem 0;
+            font-family: Sansita;
+            font-weight: 200;
+        }
+
+        .field-collection {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--background-color-8);
+            border-radius: 10px;
+            font-family: Opensans;
+        }
+
+        .field-news img {
+            width: 100%;
+        }
+
+        .field-news {
+            width: 80%;
+            background-color: var(--background-color-3);
+            border-radius: 10px;
+            padding: 1rem;
+
+            .upper-info {
+                display: flex;
+                justify-content: space-between;
+
+                .field {
+                    outline: var(--text-color-2) solid;
+                    outline-width: 2px;
+                    width: fit-content;
+                    padding: 0.25rem;
+                    border-radius: 25px;
+                    font-family: Opensans;
+                    font-size: var(--font-size-xs);
+                }
+
+                .ago {
+                    font-family: Opensans;
+                    font-size: var(--font-size-xs);
+                }
+            }
+
+                h4 {
+                    font-family: Opensans;
+                    font-weight: 600;
+                    padding: 1rem 0 1rem 0;
+                }
+
+                img {
+                    align-self: center;
+                    border-radius: 10px;
+                    width: 100%;
+                    height: auto;
+                }
+
+                .story {
+                    font-family: Opensans;
+                    font-size: var(--font-size-s);
+                    width: 25ch;
+                    padding-top: 1rem;
+                }
+        }
+
+        .news-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 
     
     /* ////////////////////////////////////////////////////////////// */
